@@ -18,9 +18,10 @@ double anotherRealNumber = 2.3; // A double literal value.
 
 #region Three variables that store the number 2 million.
 
-int decimalNotation = 2_000_000;
+int decimalNotation = 2_000_000; //digit separators 
 int binaryNotation = 0b_0001_1110_1000_0100_1000_0000;
 int hexadecimalNotation = 0x_001E_8480;
+int hexadecimalNotation2 = 0x001E8480;
 
 #endregion
 

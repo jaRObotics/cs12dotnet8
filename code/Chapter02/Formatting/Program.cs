@@ -1,8 +1,10 @@
 ﻿#region Formatting using numbered positional arguments
+//added: <Using Include="System.Console" Static="true" />
 
 int numberOfApples = 12;
 decimal pricePerApple = 0.35M;
 
+//OLD STYLE WAY 
 WriteLine(
   format: "{0} apples cost {1:C}",
   arg0: numberOfApples,
@@ -44,13 +46,13 @@ int bananasCount = 56789;
 
 WriteLine();
 
-WriteLine(format: "{0,-10} {1,6}",
+WriteLine(format: "{0,-12} {1,6}",
   arg0: "Name", arg1: "Count");
 
-WriteLine(format: "{0,-10} {1,6:N0}",
+WriteLine(format: "{0,-12} {1,6:N0}",
   arg0: applesText, arg1: applesCount);
 
-WriteLine(format: "{0,-10} {1,6:N0}",
+WriteLine(format: "{0,-12} {1,6:N0}",
   arg0: bananasText, arg1: bananasCount);
 
 #endregion
@@ -58,10 +60,10 @@ WriteLine(format: "{0,-10} {1,6:N0}",
 #region Getting text input from the user
 
 Write("Type your first name and press ENTER: ");
-string? firstName = ReadLine();
+string? firstName = ReadLine(); //we expect null here 
 
 Write("Type your age and press ENTER: ");
-string age = ReadLine()!;
+string age = ReadLine()!; //exclamation mark! 
 
 WriteLine($"Hello {firstName}, you look good for {age}.");
 
@@ -76,4 +78,5 @@ WriteLine("Key: {0}, Char: {1}, Modifiers: {2}",
   arg0: key.Key, arg1: key.KeyChar, arg2: key.Modifiers);
 
 #endregion
+
 

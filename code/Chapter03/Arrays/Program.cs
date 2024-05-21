@@ -1,6 +1,7 @@
 ﻿#region Working with single-dimensional arrays
 
 string[] names; // This can reference any size array of strings.
+var jaro = new string[4] ;
 
 // Allocate memory for four strings in an array.
 names = new string[4];
@@ -32,12 +33,12 @@ string[,] grid1 = // Two dimensional array.
   { "Aardvark", "Bear", "Cat", "Dog" }
 };
 
-WriteLine($"1st dimension, lower bound: {grid1.GetLowerBound(0)}");
+WriteLine($"1st dimension, lower bound: {grid1.GetLowerBound(0)}"); //interesting method 
 WriteLine($"1st dimension, upper bound: {grid1.GetUpperBound(0)}");
 WriteLine($"2nd dimension, lower bound: {grid1.GetLowerBound(1)}");
 WriteLine($"2nd dimension, upper bound: {grid1.GetUpperBound(1)}");
 
-for (int row = 0; row <= grid1.GetUpperBound(0); row++)
+for (int row = 0; row <= grid1.GetUpperBound(0); row++) //interesting method 
 {
   for (int col = 0; col <= grid1.GetUpperBound(1); col++)
   {
@@ -98,7 +99,7 @@ WriteLine($"{nameof(emptyNumbers)}: {CheckSwitch(emptyNumbers)}");
 WriteLine($"{nameof(threeNumbers)}: {CheckSwitch(threeNumbers)}");
 WriteLine($"{nameof(sixNumbers)}: {CheckSwitch(sixNumbers)}");
 
-static string CheckSwitch(int[] values) => values switch
+static string CheckSwitch(int[] values) => values switch //Expression-Bodied Method 
 {
   [] => "Empty array",
   [1, 2, _, 10] => "Contains 1, 2, any single number, 10.",

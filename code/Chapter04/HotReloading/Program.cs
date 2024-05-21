@@ -3,6 +3,6 @@
 
 while (true)
 {
-  WriteLine("Hello, Hot Reload!");
-  await Task.Delay(2000);
+  WriteLine("Hetertert fgfdg");
+  await Task.Delay(1000);
 }

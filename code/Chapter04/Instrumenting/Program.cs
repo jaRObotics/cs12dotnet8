@@ -5,24 +5,20 @@ string logPath = Path.Combine(Environment.GetFolderPath(
     Environment.SpecialFolder.DesktopDirectory), "log.txt");
 
 Console.WriteLine($"Writing to: {logPath}");
-
 TextWriterTraceListener logFile = new(File.CreateText(logPath));
-
 Trace.Listeners.Add(logFile);
 
 #if DEBUG
-// Text writer is buffered, so this option calls
-// Flush() on all listeners after writing.
-Trace.AutoFlush = true;
+// Text writer is buffered, so this option calls Flush() on all listeners after writing.
+Trace.AutoFlush = true; //this refreshes the file content quicker but reduces app overall performance 
 #endif
 
-Debug.WriteLine("Debug says, I am watching!");
-Trace.WriteLine("Trace says, I am watching!");
+Debug.WriteLine("Debug says, I am watching!"); //DEBUG
+Trace.WriteLine("Trace says, I am watching!"); //TRACE 
 
 string settingsFile = "appsettings.json";
 
-string settingsPath = Path.Combine(
-  Directory.GetCurrentDirectory(), settingsFile);
+string settingsPath = Path.Combine(Directory.GetCurrentDirectory(), settingsFile);
 
 Console.WriteLine("Processing: {0}", settingsPath);
 
@@ -36,8 +32,7 @@ builder.SetBasePath(Directory.GetCurrentDirectory());
 
 // Add the settings file to the processed configuration and make it
 // mandatory so an exception will be thrown if the file is not found.
-builder.AddJsonFile(settingsFile,
-  optional: false, reloadOnChange: true);
+builder.AddJsonFile(settingsFile, optional: false, reloadOnChange: true);
 
 IConfigurationRoot configuration = builder.Build();
 
@@ -50,7 +45,7 @@ configuration.GetSection("PacktSwitch").Bind(ts);
 Console.WriteLine($"Trace switch value: {ts.Value}");
 Console.WriteLine($"Trace switch level: {ts.Level}");
 
-Trace.WriteLineIf(ts.TraceError, "Trace error");
+Trace.WriteLineIf(ts.TraceError, "Trace error error error");
 Trace.WriteLineIf(ts.TraceWarning, "Trace warning");
 Trace.WriteLineIf(ts.TraceInfo, "Trace information");
 Trace.WriteLineIf(ts.TraceVerbose, "Trace verbose");

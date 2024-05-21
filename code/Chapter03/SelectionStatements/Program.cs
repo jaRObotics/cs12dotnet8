@@ -19,7 +19,7 @@ else
 object o = "3";
 int j = 4;
 
-if (o is int i)
+if (o is int i) //if o is int then it's assigned to the local var i !!!
 {
   WriteLine($"{i} x {j} = {i * j}");
 }
@@ -66,7 +66,7 @@ var animals = new Animal?[]
 {
   new Cat { Name = "Karen", Born = new(year: 2022, month: 8, 
     day: 23), Legs = 4, IsDomestic = true },
-  null,
+  null, //null here! 
   new Cat { Name = "Mufasa", Born = new(year: 1994, month: 6, 
     day: 12) },
   new Spider { Name = "Sid Vicious", Born = DateTime.Today,
@@ -101,7 +101,7 @@ foreach (Animal? animal in animals)
   }
   WriteLine($"switch statement: {message}");
 
-  message = animal switch
+  message = animal switch //THIS IS A MODERN APPROACH
   {
     Cat fourLeggedCat when fourLeggedCat.Legs == 4
       => $"The cat named {fourLeggedCat.Name} has four legs.",

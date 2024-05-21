@@ -1,4 +1,4 @@
-﻿string rowSeparator = new string('-', count: 104);
+﻿string rowSeparator = new string('-', count: 50); //nice way of multiplying char
 WriteLine(rowSeparator);
 WriteLine($"Type    {"Byte(s) of memory",-4} {"Min",32} {"Max",45}");
 WriteLine(rowSeparator);
@@ -20,3 +20,5 @@ WriteLine($"float   {sizeof(float),-4} {float.MinValue,45} {float.MaxValue,45}")
 WriteLine($"double  {sizeof(double),-4} {double.MinValue,45} {double.MaxValue,45}");
 WriteLine($"decimal {sizeof(decimal),-4} {decimal.MinValue,45} {decimal.MaxValue,45}");
 WriteLine(rowSeparator);
+
+WriteLine("haha");

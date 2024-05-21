@@ -38,7 +38,10 @@ Console.WriteLine($"something is an {something.GetType()}");
 
 #region Specifying the type of a local variable
 
-var population = 67_000_000; // 67 million in UK.
+var population = 67_000_000D; // 67 million in UK.
+var population2 = 67_000_000F; 
+var population3 = 67_000_000L; 
+var population4= 67_000_000UL; 
 var weight = 1.88; // in kilograms.
 var price = 4.99M; // in pounds sterling.
 var fruit = "Apples"; // string values use double-quotes.
@@ -75,3 +78,4 @@ number = default;
 Console.WriteLine($"number reset to its default: {number}");
 
 #endregion
+

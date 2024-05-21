@@ -38,7 +38,7 @@ WriteLine("After parsing");
 
 try
 {
-  checked
+  checked //warn us for overflow, please! works AT RUNTIME
   {
     int x = int.MaxValue - 1;
     WriteLine($"Initial value: {x}");
@@ -59,7 +59,7 @@ catch (OverflowException)
 
 #region Disabling compiler overflow checks with the unchecked statement
 
-unchecked
+unchecked //works AT COMPILE-TIME (comment out "unchecked" to test it)
 {
   int y = int.MaxValue + 1;
   WriteLine($"Initial value: {y}");

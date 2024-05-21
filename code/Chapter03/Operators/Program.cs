@@ -32,8 +32,8 @@ WriteLine($"g / f = {g / f}");
 bool p = true;
 bool q = false;
 WriteLine($"AND  | p     | q    ");
-WriteLine($"p    | {p & p,-5} | {p & q,-5} ");
-WriteLine($"q    | {q & p,-5} | {q & q,-5} ");
+WriteLine($"p    | {p & p,-5} | {p & q,-5} "); //formatting/alligning in action here
+WriteLine($"q    | {q & p,-5} | {q & q,-5} "); //single symbols in use!
 WriteLine();
 WriteLine($"OR   | p     | q    ");
 WriteLine($"p    | {p | p,-5} | {p | q,-5} ");
@@ -49,11 +49,11 @@ WriteLine($"q    | {q ^ p,-5} | {q ^ q,-5} ");
 
 WriteLine();
 WriteLine($"p & DoStuff() = {p & DoStuff()}");
-WriteLine($"q & DoStuff() = {q & DoStuff()}");
+WriteLine($"q & DoStuff() = {q & DoStuff()}"); //executes the content of DoStuff() regardless q
 
 WriteLine();
-WriteLine($"p && DoStuff() = {p && DoStuff()}");
-WriteLine($"q && DoStuff() = {q && DoStuff()}");
+WriteLine($"p && DoStuff() = {p && DoStuff()}"); //double symbols! 
+WriteLine($"q && DoStuff() = {q && DoStuff()}"); //q=false so it does not execute DoStuff(), short-circuiting in action
 
 #endregion
 

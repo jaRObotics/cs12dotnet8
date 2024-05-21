@@ -4,14 +4,14 @@ namespace CalculatorLibUnitTests;
 
 public class CalculatorUnitTests
 {
-  [Fact]
+  [Fact] //Fact indeed:)
   public void TestAdding2And2()
   {
     // Arrange: Set up the inputs and the unit under test.
     double a = 2; 
     double b = 2;
     double expected = 4;
-    Calculator calc = new();
+    Calculator calc = new(); //created out of any dependencies! 
 
     // Act: Execute the function to test.
     double actual = calc.Add(a, b);

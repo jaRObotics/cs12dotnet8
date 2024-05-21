@@ -1,15 +1,24 @@
 ﻿//TimesTable(number: 7, size: 10);
 
-ConfigureConsole(); // Uses en-US by default.
-                    //ConfigureConsole(useComputerCulture: true);
-                    //ConfigureConsole(culture: "fr-FR");
+internal partial class Program
+{
+    private static void Main(string[] args)
+    {
+        TimesTable(2, 5);
 
-//decimal taxToPay = CalculateTax(amount: 149, twoLetterRegionCode: "FR");
-//WriteLine($"You must pay {taxToPay:C} in tax.");
 
-//RunCardinalToOrdinal();
+        ConfigureConsole(); // Uses en-US by default.
+                            //ConfigureConsole(useComputerCulture: true);
+                            //ConfigureConsole(culture: "fr-FR");
 
-//RunFactorial();
+        decimal taxToPay = CalculateTax(amount: 149, twoLetterRegionCode: "FR");
+        WriteLine($"You must pay {taxToPay:C} in tax.");
 
-//RunFibImperative();
-RunFibFunctional();
+        RunCardinalToOrdinal();
+
+        RunFactorial();
+
+        RunFibImperative();
+        RunFibFunctional();
+    }
+}
