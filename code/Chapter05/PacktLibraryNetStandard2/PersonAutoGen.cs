@@ -6,7 +6,7 @@ public partial class Person
 {
   #region Properties: Methods to get and/or set data or state.
 
-  // A readonly property defined using C# 1 to 5 syntax.
+  //1. A READONLY property defined using C# 1 to 5 syntax.
   public string Origin
   {
     get
@@ -17,18 +17,19 @@ public partial class Person
   }
 
   // Two readonly properties defined using C# 6 or later 
-  // lambda expression body syntax.
+  // lambda expression body syntax. (not an EB-M (this requires "()")
 
   public string Greeting => $"{Name} says 'Hello!'";
-
   public int Age => DateTime.Today.Year - Born.Year;
 
-  // A read-write property defined using C# 3 auto-syntax.
+
+
+  //2. A READ-WRITE property defined using C# 3 auto-syntax.
   public string? FavoriteIceCream { get; set; }
+
 
   // A private backing field to store the property value.
   private string? _favoritePrimaryColor;
-
   // A public property to read and write to the field.
   public string? FavoritePrimaryColor
   {
@@ -53,8 +54,8 @@ public partial class Person
     }
   }
 
-  private WondersOfTheAncientWorld _favoriteAncientWonder;
 
+  private WondersOfTheAncientWorld _favoriteAncientWonder;
   public WondersOfTheAncientWorld FavoriteAncientWonder
   {
     get { return _favoriteAncientWonder; }
@@ -101,7 +102,7 @@ public partial class Person
   {
     get
     {
-      return Children.Find(p => p.Name == name);
+      return Children.Find(p => p.Name == name); //lambda expression in action!
     }
   }
 

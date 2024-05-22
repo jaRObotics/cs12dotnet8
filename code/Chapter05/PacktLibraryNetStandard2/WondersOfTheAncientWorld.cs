@@ -1,6 +1,6 @@
 ﻿namespace Packt.Shared;
 
-[Flags]
+[Flags] //enables multiple values selection
 public enum WondersOfTheAncientWorld : byte
 {
   None = 0b_0000_0000,                     // i.e. 0

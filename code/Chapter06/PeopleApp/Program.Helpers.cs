@@ -2,18 +2,14 @@
 
 partial class Program
 {
-  private static void OutputPeopleNames(
-    IEnumerable<Person?> people, string title)
+  private static void OutputPeopleNames(IEnumerable<Person?> people, string title)
   {
-    WriteLine(title);
+    WriteLine("title: "+ title);
     foreach (Person? p in people)
     {
-      WriteLine("  {0}",
-        p is null ? "<null> Person" : p.Name ?? "<null> Name");
-
+      WriteLine("  {0}", p is null ? "<null> Person" : p.Name ?? "<null> Name");
       /* if p is null then output: <null> Person
-         else output: p.Name
-         unless p.Name is null then output: <null> Name */
+         else output: p.Name unless p.Name is null then output: <null> Name */
     }
   }
 }

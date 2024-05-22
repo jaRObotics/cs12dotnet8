@@ -1,4 +1,6 @@
-﻿class Animal // This is the base type for all animals.
+﻿namespace myanimals;
+
+class Animal // This is the base type for all animals.
 {
   public string? Name;
   public DateTime Born;

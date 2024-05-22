@@ -1,4 +1,6 @@
-﻿#region Branching with the if statement
+﻿using myanimals;
+
+#region Branching with the if statement
 
 string password = "ninja";
 

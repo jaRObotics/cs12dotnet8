@@ -16,7 +16,8 @@ public class Book
   public Book() { }
 
   // Constructor with parameters to set required fields.
-  [SetsRequiredMembers]
+  [SetsRequiredMembers] // says the compiler that this ctor sets all the required fields
+  //it's required to avoid compilation errors 
   public Book(string? isbn, string? title)
   {
     Isbn = isbn;

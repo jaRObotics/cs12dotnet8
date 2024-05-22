@@ -1,6 +1,7 @@
 ﻿namespace Packt.Shared;
 
 public record struct DisplacementVector
+//ORIGINALLY WAS: public struct DisplacementVector
 {
   public int X { get; set; }
   public int Y { get; set; }
@@ -11,7 +12,7 @@ public record struct DisplacementVector
     Y = initialY;
   }
 
-  public static DisplacementVector operator +(
+  public static DisplacementVector operator +( //operator method in action
     DisplacementVector vector1,
     DisplacementVector vector2)
   {

@@ -1,6 +1,6 @@
 ﻿namespace Packt.Shared;
 
-public class Headset(string manufacturer, string productName)
+public class Headset(string manufacturer, string productName) //primary ctor in action 
 {
   public string Manufacturer { get; set; } = manufacturer;
   public string ProductName { get; set; } = productName;

@@ -11,4 +11,7 @@ public class DvdPlayer : IPlayable
   {
     WriteLine("DVD player is playing.");
   }
+
+    //no Stop() contracted here - compilator does not complain 
+    //default interface implementation in action!
 }
